@@ -74,6 +74,7 @@ while(not keuze == "9" ):
         print ("Uitvoeren terugbetaling")
         terugTeGeven = float(input( "Bedrag originele bon: "))
         reden = input("Reden retour: ")
+        #Verwerk retourbedrag in dagtotaal
         dagTotaalTerug = terugTeGeven
     elif(keuze == "3"):
         print ("======= DAG TOTALEN ========")
@@ -82,6 +83,7 @@ while(not keuze == "9" ):
         print ("Retour:           " + str(dagTotaalTerug))
         print ("In kassa:         " + str( bedragInKassaBegin + dagTotaal - dagTotaalTerug ))
         input("Druk op <ENTER> om door te gaan.")
+# Gebruiker wil het programma afsluiten, vraag om bedrag in kassa
 inKassa = float(input("Hoeveel zit er nu in de kassa?")) 
 while(not inKassa == (bedragInKassaBegin + dagTotaal - dagTotaalTerug )):
     print("Je hebt een kassaverschil! Tel de kassa opnieuw")
